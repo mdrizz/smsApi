@@ -18,7 +18,7 @@ public class SmsService {
 
     public void sendSms(String toPhoneNumber, String message) {
         PhoneNumber to = new PhoneNumber(toPhoneNumber);
-        PhoneNumber from = new PhoneNumber("+13203313375");
+        PhoneNumber from = new PhoneNumber("Twilio mobile number");
         Message twilioMessage = Message.creator(to, from , message).create();
         System.out.println("SMS sent: " + twilioMessage.getSid());
     }
